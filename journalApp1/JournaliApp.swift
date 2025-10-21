@@ -4,14 +4,16 @@
 //
 //  Created by Joumana Alsagheir on 19/10/2025.
 //
-
 import SwiftUI
 
 @main
-struct journalApp1App: App {
+struct JournaliApp: App {
+    @StateObject private var journal = JournalViewModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashView()
+                .environmentObject(journal)
         }
     }
 }
